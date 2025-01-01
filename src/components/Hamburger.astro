@@ -1,0 +1,76 @@
+---
+---
+<div class="hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+    .hamburger {
+        cursor: pointer;
+        display: block;
+        justify-self: flex-end;
+        width: 4rem; /* Уменьшите ширину */
+        padding: 25px; /* Уменьшите внутренние отступы */
+        font-family: "Nunito", sans-serif;
+    }
+
+    .hamburger .line {
+        display: block;
+        width: 30px; /* Уменьшите ширину линий */
+        height: 3px; /* Уменьшите толщину линий */
+        margin-bottom: 6px; /* Уменьшите промежутки между линиями */
+        background-color: var(--btn-text-color); /* Цвет линий */
+        border-radius: 3px; /* Добавьте сглаживание */
+    }
+
+
+    .nav-links {
+        width: 100%;
+        top: 5rem;
+        left: 48px;
+        background-color: #ff9776;
+        display: none;
+        margin: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .nav-links a:hover, a:focus {
+        background-color: #ff9776;
+    }
+
+    .expanded {
+        display: unset;
+    }
+
+    @media screen and (min-width: 636px) {
+        .nav-links {
+            margin-left: 5em;
+            display: block;
+            position: static;
+            width: auto;
+            background: none;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 15px 20px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+</style>

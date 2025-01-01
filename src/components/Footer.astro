@@ -1,0 +1,72 @@
+---
+const platform = "github";
+const username = "withastro";
+---
+
+<footer>
+    <div class="footer_container">
+        <div class="left_info">
+            <a href="/"><img src="/images/logo.PNG" alt="Logo" class="logo"/></a>
+            <a href="/documentation/public_offer" >Публичная оферта</a>
+            <a href="/documentation/privacy_policy">Политика конфиденциальности</a>
+            <a href="/documentation/recurring_payments">Правила платежной организации</a>
+        </div>
+        <div class="right_info">
+            <h3>Наши социальные сети:</h3>
+            <a href="https://t.me/vpnshop_channel">Телеграм канал</a>
+            <a href="https://t.me/+Mqy4MeJ5yMxkNDQy">Чат партнеров</a>
+            <a href="https://t.me/vpnshop_supp">Поддержка</a>
+            <a href="https://t.me/vpnshop_supp"><img src="/images/telegram.png" alt="Logo" class="telegram"/></a>
+        </div>
+    </div>
+</footer>
+
+
+<style>
+    .logo {
+        height: 70px; /* Высота логотипа */
+        width: auto; /* Сохраняем пропорции */
+        cursor: pointer; /* Указываем курсор-руку при наведении */
+        margin-top: 10px; /* Добавляем отступ сверху */
+    }
+
+    .telegram {
+        width: 30px; /* Ширина 15px */
+        height: 30px;
+        justify-content: center;
+    }
+
+    .footer_container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left_info, .right_info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right_info {
+        margin-top: 30px;
+    }
+
+    a {
+        text-decoration: none; /* Убираем подчеркивание */
+        color: var(--font-color); /* Цвет ссылок — черный */
+        margin-bottom: 5px; /* Добавляем отступ между ссылками */
+    }
+
+    a:hover {
+        color: var(--btn-bg-color); /* Изменение цвета при наведении */
+    }
+
+    @media screen and (max-width: 1100px) {
+        .right_info {
+            margin-top: 0;
+        }
+    }
+
+</style>

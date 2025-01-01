@@ -1,0 +1,147 @@
+---
+import '../../styles/global.css'
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro"
+---
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <Header/>
+</head>
+<body>
+<div class="container">
+    <!-- Блок ожидания -->
+    <div id="loading" class="centered">
+        <svg class="spinner" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+        <div class="message">Мы обрабатываем ваш платёж...</div>
+    </div>
+
+    <!-- Блок успешного платежа -->
+    <div id="success" class="success centered">
+        <div class="icon">
+            <svg viewBox="0 0 50 50" class="checkmark">
+                <path class="check" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M15 25l8 8 12-16"/>
+            </svg>
+        </div>
+        <div class="message">Ваш платёж успешно выполнен!</div>
+    </div>
+</div>
+
+
+<script>
+    // Скрипт для смены состояния
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("success").style.display = "flex";
+    }, 3000);
+</script>
+</body>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container {
+        display: flex;
+        margin-top: 300px;
+        background: var(--color-secondary);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 40px;
+        width: 350px;
+        position: relative;
+    }
+
+    .centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .spinner {
+        animation: rotate 1.5s linear infinite;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .path {
+        stroke: #4caf50;
+        stroke-linecap: round;
+        animation: dash 1.5s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 150;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -35;
+        }
+        100% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -124;
+        }
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #4caf50;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .checkmark {
+        width: 40px;
+        height: 40px;
+        stroke: white;
+        stroke-width: 5;
+        animation: draw 0.5s ease forwards;
+    }
+
+    .message {
+        font-size: 18px;
+        text-align: center;
+        color: var(--font-color);
+    }
+
+    @keyframes draw {
+        from {
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .success {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+</html>

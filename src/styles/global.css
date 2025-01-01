@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap');
+
+/* Тема "Светлая" */
+.theme-light {
+  --color-primary: #ffffff; /* Основной цвет */
+  --color-secondary: #fbfbfe; /* Вторичный цвет  */
+  --font-color: #000000; /* Цвет текста */
+  --btn-bg-color: #0060df; /* Фон кнопок  */
+  --btn-text-color: #111111; /* Текст кнопок  */
+}
+
+/* Тема "Тёмная" */
+.theme-dark {
+  --color-primary: #111111; /* Основной цвет */
+  --color-secondary: #1a1a1a; /* Вторичный цвет  */
+  --font-color: #ffffff; /* Цвет текста */
+  --btn-bg-color: #0060df; /* Фон кнопок  */
+  --btn-text-color: #ffffff; /* Текст кнопок  */
+}
+
+
+/* Стили body */
+body {
+  overflow-x: hidden;
+  background: var(--color-primary);
+  color: var(--font-color);
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Глобальные настройки box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Стили заголовков */
+h1, h2 {
+  color: var(--font-color);
+  font-family: 'Unbounded', sans-serif;
+}
+
+/* Стили переключателя темы */
+#theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}

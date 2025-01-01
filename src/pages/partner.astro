@@ -1,0 +1,318 @@
+---
+import '../styles/global.css';
+const pageTitle = "Партнерская программа";
+import Header from '../components/Header.astro';
+import Footer from "../components/Footer.astro";
+---
+
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <Header/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>{pageTitle}</title>
+    <div class="one_block">
+        <h2>VPN SHOP — отличный способ для пассивного дохода</h2>
+        <p>Получай до 50% с каждого пополнения, сделанного приглашёнными тобой людьми!</p>
+        <img src="/images/phone_macbook.PNG" alt="phone_macbook"/>
+    </div>
+    <div class="items_block">
+        <div class="items">
+            <div class="item_title">3 000 +</div>
+            <div class="item_description">партнеров работают с нами</div>
+        </div>
+        <div class="items">
+            <div class="item_title">5 000 +</div>
+            <div class="item_description">выводов средств совершили наши партнеры</div>
+        </div>
+        <div class="items">
+            <div class="item_title">2 600</div>
+            <div class="item_description">участников открытого комьюнити</div>
+        </div>
+        <div class="items">
+            <div class="item_title">50 000₽</div>
+            <div class="item_description">средний/ежемесячный доход наших партнеров</div>
+        </div>
+    </div>
+    <div class="two_block">
+        <section class="partner-program">
+            <div class="program-header">
+                <h2>Станьте владельцем IT-бизнеса за 2 минуты</h2>
+                <p>Уникальная партнерская программа с доходом до 50% от пополнений ваших рефералов</p>
+            </div>
+            <div class="program-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="/images/icon-time.png" alt="Иконка">
+                    </div>
+                    <p>Простое создание бота за 2 минуты</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="/images/icon-work.png" alt="Иконка">
+                    </div>
+                    <p>Заработок до 50% с каждого пополнения</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="/images/icon-grafik.png" alt="Иконка">
+                    </div>
+                    <p>Обслуживание и поддержка на нашей стороне</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="/images/icon-money.png" alt="Иконка">
+                    </div>
+                    <p>Максимум возможностей для пассивного дохода</p>
+                </div>
+            </div>
+        </section>
+        <div class="three_block">
+            <div class="invitation-block">
+                <h2>Тысячи пользователей уже зарабатывают вместе с нами!</h2>
+                <p>Присоединяйся к нам и пополни наше развивающееся и успешное комьюнити</p>
+                <div class="button_web">
+                    <a href="https://t.me/vpnshops_robot" target="_blank">
+                        <span>Подключиться</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <Footer/>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap');
+
+
+        .one_block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .one_block img {
+            width: 60%; /* Изображение растягивается по ширине блока */
+            display: flex; /* Убираем возможные лишние отступы */
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            max-width: 800px;
+            margin-top: 60px;
+            font-size: 2.5rem;
+            font-family: "Unbounded", sans-serif;
+            line-height: 2.8rem;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            text-align: center;
+            color: var(--font-color);
+        }
+
+        p {
+            font-family: "Unbounded", sans-serif;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .items_block {
+            display: grid; /* Используем Grid для размещения элементов */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Колонки адаптируются */
+            gap: 20px; /* Расстояние между элементами */
+            padding: 20px; /* Внутренний отступ блока */
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column; /* Элементы располагаются вертикально */
+            justify-content: flex-start; /* Выравниваем содержимое по началу */
+            align-items: flex-start; /* Выравниваем элементы по левому краю */
+            padding: 15px; /* Внутренние отступы */
+            background-color: var(--color-secondary); /* Белый фон */
+            border-radius: 10px; /* Скругленные углы */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+            text-align: left; /* Выравниваем текст в контейнере по левому краю */
+        }
+
+        .item_title {
+            font-family: "Unbounded", sans-serif;
+            font-size: 24px; /* Размер текста для числа */
+            font-weight: 300; /* Жирный шрифт */
+            color: var(--font-color); /* Чёрный текст */
+            margin-bottom: 5px; /* Отступ между числом и описанием */
+            text-align: left; /* Выравниваем текст по левому краю */
+            width: 100%; /* Гарантируем, что текст занимает всю ширину родителя */
+        }
+
+        .item_description {
+            font-size: 14px; /* Размер текста для описания */
+            font-weight: 400; /* Обычный шрифт */
+            color: var(--font-color); /* Серый текст */
+            line-height: 1.5; /* Межстрочный интервал */
+            text-align: left; /* Выравниваем описание по левому краю */
+        }
+
+        /* -------------------- ВТОРОЙ БЛОК --------------------*/
+
+        .program-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .partner-program .program-header {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .partner-program .program-header p {
+            font-size: 1.1rem;
+            color: var(--btn-text-color);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .partner-program .program-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partner-program .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            position: relative;
+            gap: 20px;
+        }
+
+        .partner-program .feature:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+            direction: rtl; /* Инвертируем порядок для четных элементов */
+        }
+
+        .partner-program .feature-icon {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .partner-program .feature-icon img {
+            width: 130px;
+            height: 130px;
+        }
+
+        .partner-program .feature p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--btn-text-color);
+            line-height: 1.5;
+        }
+
+
+        .partner-program .dashed-line {
+            border-top: 2px dashed #cccccc;
+            opacity: 0.5; /* Блеклый пунктир */
+            margin: 30px auto;
+            width: 80%; /* Пунктир ограничен по ширине */
+        }
+
+        /* -------------------- ТРЕЙТИЙ БЛОК --------------------*/
+
+        .three_block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 700px;
+            font-weight: 600;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.2;
+
+        }
+
+        .button_web {
+            display: block;
+            margin: 40px auto;
+            text-decoration: none; /* Flexbox для внутреннего выравнивания */
+            padding: 10px;
+            width: 200px; /* Ширина кнопки */
+            background-color: var(--btn-bg-color); /* Цвет фона */
+            border-radius: 10px; /* Скругленные углы */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Небольшая тень */
+            cursor: pointer; /* Курсор-указатель */
+            transition: all 0.3s ease; /* Плавные изменения */
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            color: white;
+            font-family: "Unbounded", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+
+        .button_web:hover {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+            transform: scale(1.05); /* Лёгкое увеличение */
+        }
+
+
+        /* -------------------- Мобильная версия --------------------*/
+
+        @media screen and (max-width: 768px) {
+            h2 {
+                color: var(--font-color);
+                font-size: 1.5rem;
+                font-family: "Unbounded", sans-serif;
+                line-height: 1.8rem;
+                font-weight: 400;
+                letter-spacing: .1rem;
+                text-align: center;
+            }
+
+            p {
+                font-family: "Unbounded", sans-serif;
+                font-weight: 300;
+                text-align: center;
+            }
+
+            .items_block {
+                grid-template-columns: repeat(2, 1fr); /* Две колонки */
+            }
+
+            .items {
+                padding: 10px; /* Уменьшаем внутренние отступы */
+            }
+
+            .item_title {
+                font-size: 18px; /* Уменьшенный шрифт для чисел */
+            }
+
+            .item_description {
+                font-size: 11px; /* Уменьшенный шрифт для описания */
+            }
+        }
+    </style>
+
+</head>

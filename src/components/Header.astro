@@ -1,0 +1,63 @@
+---
+import Navigation from './Navigation.astro';
+import Hamburger from "./Hamburger.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+---
+<html lang="ru" class="theme-light">
+<header>
+    <nav class="nav-bar">
+        <a href="/"><img src="/images/logo.PNG" alt="Logo" class="logo"/></a>
+        <Navigation/>
+        <ThemeSwitcher/>
+        <Hamburger/>
+    </nav>
+</header>
+</html>
+
+<style>
+    /* Стили для header */
+    header {
+        padding: 15px 0 0 0;
+        width: 100%; /* Растягиваем header на всю ширину */
+        background-color: var(--color-primary); /* Белый фон */
+        position: sticky; /* Фиксация наверху при скролле */
+        top: 0;
+        z-index: 1000; /* Чтобы header был выше остальных элементов */
+    }
+
+    .telegram {
+        width: 35px; /* Ширина 15px */
+        height: 35px;
+        justify-content: center;
+    }
+
+    /* Стили для nav */
+    .nav-bar {
+        display: flex; /* Используем Flexbox для выравнивания */
+        align-items: center; /* Центрируем элементы по вертикали */
+        justify-content: space-between;
+    }
+
+    /* Стили для логотипа */
+    .logo {
+        height: 70px; /* Высота логотипа */
+        width: auto; /* Сохраняем пропорции */
+        cursor: pointer; /* Указываем курсор-руку при наведении */
+    }
+
+    /* Адаптация навигации для маленьких экранов */
+    @media (max-width: 900px) {
+
+        .logo {
+            margin-top: 0;
+            align-content: center;
+            justify-content: center;
+            height: 60px; /* Уменьшение логотипа */
+        }
+
+        .help-icons {
+            display: none;
+        }
+    }
+
+</style>
